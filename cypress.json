@@ -1,6 +1,6 @@
 {
   "baseUrl": "http://localhost:4200/",
   "integrationFolder": "src/app/tests/e2e/integration",
-  "supportFile": "src/app/tests/e2e/support"
+  "supportFile": "src/app/tests/e2e/support",
   "viewportWidth": 1280
 }
