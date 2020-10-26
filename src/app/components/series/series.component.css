@@ -1,0 +1,13 @@
+.list-content {
+  width: 100%;
+}
+
+.mat-selection-list {
+  outline: none;
+}
+
+.scroll-viewport {
+  height: 750px;
+  width: 100%;
+  background-color: #F4F4F4;
+}

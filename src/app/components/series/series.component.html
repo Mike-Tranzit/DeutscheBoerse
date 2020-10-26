@@ -1,0 +1,24 @@
+<div *ngIf="seriesList; else loggedOut">
+  <mat-card-header>
+    <mat-card-title>Series</mat-card-title>
+    <mat-card-subtitle>
+      <button mat-raised-button color="warn" (click)="onBack()">Back</button>
+      <button mat-raised-button color="primary" (click)="submitHandler()" [disabled]="!seriesAreSelected">Submit</button>
+    </mat-card-subtitle>
+
+  </mat-card-header>
+  <mat-selection-list #series>
+    <cdk-virtual-scroll-viewport itemSize="50" class="scroll-viewport">
+      <mat-list-option  *cdkVirtualFor="let series of seriesList; trackBy:seriesIndex" [value]="series">
+       {{series.product_id}} / {{series.iid}}
+      </mat-list-option>
+    </cdk-virtual-scroll-viewport>
+  </mat-selection-list>
+</div>
+
+<ng-template #loggedOut>
+  <mat-card-header>
+    <mat-card-title>Please wait</mat-card-title>
+    <mat-card-subtitle>We try to load series</mat-card-subtitle>
+  </mat-card-header>
+</ng-template>

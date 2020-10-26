@@ -1,0 +1,8 @@
+.basic-container {
+  width: 500px;
+  background-color: #fff;
+  margin: 0 auto;
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto;
+}

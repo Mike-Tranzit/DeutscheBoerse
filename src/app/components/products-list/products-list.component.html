@@ -1,0 +1,18 @@
+<div *ngIf="productsList; else loggedOut">
+  <mat-card-header>
+    <mat-card-title>Products list</mat-card-title>
+    <mat-card-subtitle>With virtual scroll</mat-card-subtitle>
+  </mat-card-header>
+    <mat-selection-list [multiple]="false">
+    <cdk-virtual-scroll-viewport itemSize="50" class="scroll-viewport">
+        <app-product *cdkVirtualFor="let product of productsList; trackBy:productIndex" [product]="product"></app-product>
+    </cdk-virtual-scroll-viewport>
+    </mat-selection-list>
+</div>
+
+<ng-template #loggedOut>
+  <mat-card-header>
+    <mat-card-title>Please wait</mat-card-title>
+    <mat-card-subtitle>We try to load data</mat-card-subtitle>
+  </mat-card-header>
+</ng-template>
